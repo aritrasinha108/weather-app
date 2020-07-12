@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How's The Weather!!!</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../JavaScript/map.js"></script>
+</head>
+
+<body>
+
+    <div id='map' style='width: 100vw; height: 100vh;'></div>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiYXJpdHJhc2luaGEwMDEiLCJhIjoiY2tjZW95MHBqMGFkMzJzcGJjNjJpMzMwbSJ9.Fq1KwaMiA99iXF8yT0N2Zw';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            zoom: 1
+        });
+        var marker = new mapboxgl.Marker({
+            draggable: true
+        })
+            .setLngLat([44, 44])
+            .addTo(map);
+
+        async function onDragEnd() {
+            var lngLat = marker.getLngLat();
+            var data = await getWeather(lngLat.lng, lngLat.lat);
+            marker.setPopup(new mapboxgl.Popup({ offset: 25 })
+                .setHTML(`<h3>${data.name}, ${data.sys.country}</h3><p>
+        ${today.getDate()} ${months[today.getMonth()]} ${today.getFullYear()}<br>${data.main.temp}℃, Feels Like ${data.main.feels_like}℃<br> ${data.weather[0].description}<br>Range:${data.main.temp_min}℃ - ${data.main.temp_max}℃</p>`))
+
+        }
+
+        marker.on('dragend', onDragEnd);
+    </script>
+</body>
+
+
+</html>

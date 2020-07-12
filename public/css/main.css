@@ -1,0 +1,215 @@
+
+/* Utility Classes */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.primary
+{
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+.secondary
+{
+    text-align: center;
+    font-size: 1.9rem;
+    font-weight: bold;
+    font-style: italic;
+}
+html
+{
+    background: url('../Assets/bg1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+/* The Nvigation Bar  */
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+
+}
+nav::before
+{
+    content: "";
+    background-color: #1346a2b0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 84px;
+    width: 99.6%;
+    z-index: -1;
+    opacity: 0.7;
+    border-radius: 10px;
+    box-shadow: 4px 3px black;
+}
+
+/* Icon of the website */
+#icon
+{
+    margin-right: 20px;
+}
+nav img
+{
+    width: 65px;
+    height: 65px;
+    border-radius: 226% 177% 68% 61%;
+    align-items: center;
+}
+/* The navigation bar choices */
+nav ul
+{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    align-items: center;
+    align-content: flex-start;
+}
+nav ul li
+{
+    margin: 2px 102px;
+    border-radius: 5px;
+    width: 188px;
+}
+nav ul li a
+{
+    text-decoration: none;
+    font-size: 1.443rem;
+    display: block;
+    color: darkorange;
+    font-weight: bold;
+    margin: 2px 5px;
+    text-shadow: 2px 2px 2px #000000;
+    text-align: center;
+}
+nav ul li:hover
+{
+    background-color: #daffd1;
+    color: rgb(110, 9, 115);
+    box-shadow: 2px 2px black;
+    transform: rotateY(360deg);
+    transition: background-color 1.5s ease-out, color 1.3s ease-out, transform 1.5s ease-out;
+}    
+nav a:hover
+{
+color: rgb(14, 137, 146);
+transition: color 1.3s ease-in-out;
+text-shadow: 1px 1px 1px #64f1b7;
+
+}
+/* The Description section of the index page */
+#intro
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    background-color: #0000006b;
+    box-shadow: 8px 6px #000000db;
+    border-radius: 9px 6px;
+    margin-top: 26px;
+  
+    
+}
+
+#intro h1,#CityHead
+{
+    color: #1346a2;
+    text-shadow: 2px 2px 1px #75cbff;
+    margin-bottom: 57px;
+    margin-top: 47px;
+    
+}
+
+#description,#range,#temp,#weather,#city, #date
+{
+    color: darkorange;
+    text-shadow: 2px 2px 4px #000000;
+   
+  
+    
+}
+
+#form
+{
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+    align-content: center;
+}
+/* Forms */
+form
+{
+    display: block;
+}
+.field
+{
+    height: 50px;
+    width: 357px;
+    color: darkorange;
+    text-shadow: 2px 2px 2px #000000;
+    border-radius: 9px;
+    box-shadow: 3px 4px #000000cf;
+    background-color: #befbf54a;
+    margin: 5px 8px;
+    font-size: 1.5rem;
+    border: none;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+}
+.field:selected,.field:active,input:selected
+{
+    color: darkorange;
+    text-shadow: 2px 2px 2px #000000;
+    background-color: #befbf54a;
+}
+.btn
+{
+    border-radius: 17px;
+    margin: 5px 34px;
+    height: 47px;
+    width: 106px;
+    background-color: #1346a2b0;
+    box-shadow: 3px 3px #75cbff;
+    border: none;
+    font-style: italic;
+    font-size: 1.3rem;
+    font-weight: bold;
+    /* color: #e61919; */
+    color: #ff8c00e0;
+    text-shadow: 2px 2px 2px #000000;
+}
+.btn:hover,.btn:active, .btn selected
+{
+ color:  #1346a2b0;  
+ /* background-color: #e61919; */
+ background-color: darkorange;
+ text-shadow: 1px 1px 1px #75cbff; 
+ box-shadow: 3px 3px black;
+}
+/* Results */
+#results
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+/* Footer  */
+footer
+{
+text-align: center;
+background-color: #000000a8;
+font-size: 1.5rem;
+color: white;
+width: 100%;
+position: relative;
+bottom: -131px;
+}
+
+

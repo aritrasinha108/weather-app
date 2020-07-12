@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Using City Name</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../JavaScript/city.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div id="icon">
+            <img src="../Assets/icon.png" alt="Not able to load image">
+        </div>
+        <div id="navchoice">
+            <ul>
+                <li class="choice"><a href="/city">Search using City</a></li>
+                <li class="choice"><a href="/map">Search using Map</a></li>
+                <li class="choice"><a href="/">Home</a></li>
+
+            </ul>
+        </div>
+
+
+    </nav>
+    <section id="intro">
+        <h1 class="primary" id="CityHead">
+            Search Using City Name
+        </h1>
+        <div id="form">
+            <form action="#" name="cityform" id="cityform">
+                <input type="text" class="field" name="city" placeholder="Enter City Name">
+            </form>
+            <button class="btn" onclick="getWeather()">Submit</button>
+        </div>
+        <div id="result">
+            <div id="city" class="secondary"></div>
+            <div id="date" class="secondary"></div>
+            <div id="temp" class="secondary"></div>
+            <div id="weather" class="secondary"></div>
+            <div id="range" class="secondary"></div>
+        </div>
+    </section>
+</body>
+<!-- <footer>
+    Copyright &copy; www.thebananarepublic.com. All rights reserved!
+</footer> -->
+</body>
+
+</html>
